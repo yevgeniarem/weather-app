@@ -1,7 +1,19 @@
+import React from "react";
+
+import Header from "./Components/Header";
+import Dropdown from "./Components/Dropdown";
+import CurrentWeather from "./Components/CurrentWeather";
+import CurrentWeatherDetails from "./Components/CurrentWeatherDetails";
+import Forecast from "./Components/Forecast";
+
 function App() {
   return (
     <div>
-      <h1>hi</h1>
+      <Header />
+      <Dropdown />
+      <CurrentWeather />
+      <CurrentWeatherDetails />
+      <Forecast />
     </div>
   );
 }
