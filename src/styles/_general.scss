@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #8fa8cd;
+}
+
+.card {
+  @extend .p-3;
+  @extend .m-4;
+  border-radius: 10px;
+}
+
+.header {
+  @extend .card;
+  background-color: $dark-color;
+  color: $white;
+  text-align: center;
+}
+
+.dropdown {
+  @extend .card;
+  background-color: $white;
+  width: 50%;
+  margin: 0 auto !important;
+
+  &__form-control {
+    margin-bottom: 5px;
+  }
+}
+
+.current-weather-card {
+  @extend .card;
+  background-color: $medium-color;
+  color: $white;
+}
+
+.current-weather-details-card {
+  @extend .card;
+  background-color: $white;
+}
+
+.forecast-card {
+  @extend .card;
+  background-color: $white;
+
+  &__row {
+    background-color: $light-color;
+    @extend .p-1;
+    @extend .m-1;
+    border-radius: 10px;
+  }
+}
