@@ -22,7 +22,7 @@ function Dropdown({
             as="select"
             onChange={handleChange}
             className="dropdown__form-control"
-            value={defaultValue}
+            value={defaultValue || ""}
           >
             <option defaultValue disabled={isSelected}>
               Choose...
