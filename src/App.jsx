@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
-// import axios from "axios";
+import axios from "axios";
 
 import Header from "./componentsReusable/Header";
 import Dropdown from "./componentsReusable/Dropdown";
 import CurrentWeather from "./componentsContainer/CurrentWeather";
 import CurrentWeatherDetails from "./componentsContainer/CurrentWeatherDetails";
 import Forecast from "./componentsContainer/Forecast";
-import citiesdata from "./cities.json";
-import mountainview from "./mountain-view.json";
 import CityDropdownData from "./models/CityDropdownData";
 import { getLocalStorage, setLocalStorage } from "./utils/localStorage";
 import CurrentWeatherData from "./models/CurrentWeatherData";
@@ -29,7 +27,7 @@ function App() {
     (async () => {
       try {
         setCitiesIsLoading(true);
-        const data = citiesdata;
+        const { data } = await axios.get("http://localhost:3001/cities");
         setCities(data);
 
         // below can only run once citie list is set
@@ -50,7 +48,9 @@ function App() {
       (async () => {
         try {
           setCityWeatherIsLoading(true);
-          const data = mountainview;
+          const { data } = await axios.get(
+            `http://localhost:3001/cities/${selectedCity}`
+          );
           setCityWeather(data);
         } catch (err) {
           console.error(err);

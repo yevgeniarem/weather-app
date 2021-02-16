@@ -1,8 +1,0 @@
-[
-  { "woeid": 1, "city": "Chicago", "region": "IL" },
-  { "woeid": 2, "city": "Houston", "region": "TX" },
-  { "woeid": 3, "city": "Los Angeles", "region": "CA" },
-  { "woeid": 4, "city": "Mountain View", "region": "CA" },
-  { "woeid": 5, "city": "New York", "region": "NY" },
-  { "woeid": 6, "city": "Philadelphia", "region": "PA" }
-]

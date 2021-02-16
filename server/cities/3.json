@@ -1,7 +1,7 @@
 {
   "location": {
-    "woeid": 4,
-    "city": "Mountain View",
+    "woeid": 3,
+    "city": "Los Angeles",
     "region": " CA",
     "country": "United States",
     "lat": 37.371609,
@@ -10,23 +10,23 @@
   },
   "current_observation": {
     "wind": {
-      "chill": 59,
-      "direction": 165,
-      "speed": 8.7
+      "chill": 75,
+      "direction": 100,
+      "speed": 0.9
     },
     "atmosphere": {
-      "humidity": 76,
-      "visibility": 10,
-      "pressure": 29.68
+      "humidity": 25,
+      "visibility": 39,
+      "pressure": 19
     },
     "astronomy": {
-      "sunrise": "7:23 am",
-      "sunset": "5:7 pm"
+      "sunrise": "6:13 am",
+      "sunset": "7:1 pm"
     },
     "condition": {
-      "text": "Scattered Showers",
+      "text": "Sunny",
       "code": 39,
-      "temperature": 60
+      "temperature": 84
     },
     "pubDate": 1546992000
   },
@@ -34,81 +34,81 @@
     {
       "day": "Tue",
       "date": 1546934400,
-      "low": 52,
-      "high": 61,
-      "text": "Rain",
+      "low": 61,
+      "high": 80,
+      "text": "Sunny",
       "code": 12
     },
     {
       "day": "Wed",
       "date": 1547020800,
-      "low": 51,
-      "high": 62,
-      "text": "Scattered Showers",
+      "low": 59,
+      "high": 81,
+      "text": "Sunny",
       "code": 39
     },
     {
       "day": "Thu",
       "date": 1547107200,
-      "low": 46,
-      "high": 60,
-      "text": "Mostly Cloudy",
+      "low": 58,
+      "high": 83,
+      "text": "Foggy",
       "code": 28
     },
     {
       "day": "Fri",
       "date": 1547193600,
-      "low": 48,
-      "high": 61,
-      "text": "Showers",
+      "low": 57,
+      "high": 82,
+      "text": "Sunny",
       "code": 11
     },
     {
       "day": "Sat",
       "date": 1547280000,
-      "low": 47,
-      "high": 62,
-      "text": "Rain",
+      "low": 59,
+      "high": 82,
+      "text": "Sunny",
       "code": 12
     },
     {
       "day": "Sun",
       "date": 1547366400,
-      "low": 48,
-      "high": 58,
-      "text": "Rain",
+      "low": 61,
+      "high": 80,
+      "text": "Sunny",
       "code": 12
     },
     {
       "day": "Mon",
       "date": 1547452800,
-      "low": 47,
-      "high": 58,
-      "text": "Rain",
+      "low": 61,
+      "high": 88,
+      "text": "Foggy",
       "code": 12
     },
     {
       "day": "Tue",
       "date": 1547539200,
-      "low": 46,
-      "high": 59,
-      "text": "Scattered Showers",
+      "low": 59,
+      "high": 89,
+      "text": "Sunny",
       "code": 39
     },
     {
       "day": "Wed",
       "date": 1547625600,
-      "low": 49,
-      "high": 56,
-      "text": "Rain",
+      "low": 58,
+      "high": 90,
+      "text": "Sunny",
       "code": 12
     },
     {
       "day": "Thu",
       "date": 1547712000,
-      "low": 49,
-      "high": 59,
-      "text": "Scattered Showers",
+      "low": 59,
+      "high": 91,
+      "text": "Sunny",
       "code": 39
     }
   ]

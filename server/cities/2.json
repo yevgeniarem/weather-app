@@ -1,0 +1,115 @@
+{
+  "location": {
+    "woeid": 2,
+    "city": "Houston",
+    "region": " TX",
+    "country": "United States",
+    "lat": 37.371609,
+    "long": -122.038254,
+    "timezone_id": "America/Los_Angeles"
+  },
+  "current_observation": {
+    "wind": {
+      "chill": 65,
+      "direction": 120,
+      "speed": 1.1
+    },
+    "atmosphere": {
+      "humidity": 30,
+      "visibility": 21,
+      "pressure": 21
+    },
+    "astronomy": {
+      "sunrise": "6:13 am",
+      "sunset": "7:1 pm"
+    },
+    "condition": {
+      "text": "Sunny",
+      "code": 39,
+      "temperature": 71
+    },
+    "pubDate": 1546992000
+  },
+  "forecasts": [
+    {
+      "day": "Tue",
+      "date": 1546934400,
+      "low": 61,
+      "high": 75,
+      "text": "Sunny",
+      "code": 12
+    },
+    {
+      "day": "Wed",
+      "date": 1547020800,
+      "low": 62,
+      "high": 77,
+      "text": "Sunny",
+      "code": 39
+    },
+    {
+      "day": "Thu",
+      "date": 1547107200,
+      "low": 61,
+      "high": 78,
+      "text": "Sunny",
+      "code": 28
+    },
+    {
+      "day": "Fri",
+      "date": 1547193600,
+      "low": 60,
+      "high": 70,
+      "text": "Sunny",
+      "code": 11
+    },
+    {
+      "day": "Sat",
+      "date": 1547280000,
+      "low": 61,
+      "high": 76,
+      "text": "Sunny",
+      "code": 12
+    },
+    {
+      "day": "Sun",
+      "date": 1547366400,
+      "low": 60,
+      "high": 76,
+      "text": "Cloudy",
+      "code": 12
+    },
+    {
+      "day": "Mon",
+      "date": 1547452800,
+      "low": 65,
+      "high": 79,
+      "text": "Sunny",
+      "code": 12
+    },
+    {
+      "day": "Tue",
+      "date": 1547539200,
+      "low": 66,
+      "high": 78,
+      "text": "Sunny",
+      "code": 39
+    },
+    {
+      "day": "Wed",
+      "date": 1547625600,
+      "low": 61,
+      "high": 77,
+      "text": "Cloudy",
+      "code": 12
+    },
+    {
+      "day": "Thu",
+      "date": 1547712000,
+      "low": 61,
+      "high": 76,
+      "text": "Sunny",
+      "code": 39
+    }
+  ]
+}
