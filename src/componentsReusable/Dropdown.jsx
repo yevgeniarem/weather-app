@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
+import PropTypes from "prop-types";
 
 function Dropdown({
   options,
@@ -8,18 +9,20 @@ function Dropdown({
   dataFormatter,
   isSelected,
   isLoading,
+  defaultValue,
 }) {
   return (
     <div className="dropdown">
       {isLoading ? (
         <div>data is loading...</div>
       ) : (
-        <Form.Group>
+        <Form.Group className="dropdown__form">
           <Form.Label className="dropdown__label">{label}</Form.Label>
           <Form.Control
             as="select"
             onChange={handleChange}
             className="dropdown__form-control"
+            value={defaultValue}
           >
             <option defaultValue disabled={isSelected}>
               Choose...
@@ -39,5 +42,25 @@ function Dropdown({
     </div>
   );
 }
+
+Dropdown.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.object),
+  label: PropTypes.string,
+  handleChange: PropTypes.func,
+  dataFormatter: PropTypes.func,
+  isSelected: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  defaultValue: PropTypes.string,
+};
+
+Dropdown.defaultProps = {
+  options: [],
+  label: null,
+  handleChange: null,
+  dataFormatter: null,
+  isSelected: null,
+  isLoading: null,
+  defaultValue: null,
+};
 
 export default Dropdown;

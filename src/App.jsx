@@ -9,6 +9,9 @@ import Forecast from "./componentsContainer/Forecast";
 import citiesdata from "./cities.json";
 import mountainview from "./mountain-view.json";
 import CityDropdownData from "./models/CityDropdownData";
+import { getLocalStorage, setLocalStorage } from "./utils/localStorage";
+import CurrentWeatherData from "./models/CurrentWeatherData";
+import CurrentWeatherDetailsData from "./models/CurrentWeatherDetailsData";
 
 const TEXT = {
   HEADER_TITLE: "Welcome to Jane's Weather App!",
@@ -28,6 +31,12 @@ function App() {
         setCitiesIsLoading(true);
         const data = citiesdata;
         setCities(data);
+
+        // below can only run once citie list is set
+        const localStorageCity = getLocalStorage("selectedCity");
+        if (localStorageCity) {
+          setSelectedCity(localStorageCity);
+        }
       } catch (err) {
         console.error(err);
       } finally {
@@ -54,6 +63,7 @@ function App() {
 
   const handleDropdownChange = (e) => {
     setSelectedCity(e.target.value);
+    setLocalStorage("selectedCity", e.target.value);
   };
 
   return (
@@ -64,8 +74,9 @@ function App() {
         dataFormatter={CityDropdownData}
         label={TEXT.DROPDOWN_LABEL}
         handleChange={handleDropdownChange}
-        isSelected={selectedCity}
+        isSelected={!!selectedCity}
         isLoading={citiesIsLoading}
+        defaultValue={getLocalStorage("selectedCity")}
       />
       {cityWeatherIsLoading ? (
         <div>data is loading...</div>
@@ -73,11 +84,13 @@ function App() {
         cityWeather && (
           <div className="row">
             <div className="col-lg">
-              <CurrentWeather data={cityWeather} />
-              <CurrentWeatherDetails data={cityWeather} />
+              <CurrentWeather {...new CurrentWeatherData(cityWeather)} />
+              <CurrentWeatherDetails
+                {...new CurrentWeatherDetailsData(cityWeather)}
+              />
             </div>
             <div className="col-lg">
-              <Forecast data={cityWeather} />
+              <Forecast data={cityWeather.forecasts} />
             </div>
           </div>
         )

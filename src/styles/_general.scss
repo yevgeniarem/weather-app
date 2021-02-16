@@ -19,16 +19,21 @@ body {
   background-color: $dark-color;
   color: $white;
   text-align: center;
+
+  &__title {
+    @extend .m-0;
+  }
 }
 
 .dropdown {
   @extend .card;
+  @extend .p-1;
   background-color: $white;
   width: 50%;
   margin: 0 auto !important;
 
-  &__form-control {
-    margin-bottom: 5px;
+  &__form {
+    @extend .m-0;
   }
 }
 
@@ -52,5 +57,16 @@ body {
     @extend .p-1;
     @extend .m-1;
     border-radius: 10px;
+  }
+}
+
+.table-row {
+  &__cell {
+    @extend .my-auto;
+    @extend .p-2;
+  }
+
+  &__text {
+    @extend .m-0;
   }
 }
