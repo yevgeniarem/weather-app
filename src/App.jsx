@@ -11,9 +11,11 @@ import { getLocalStorage, setLocalStorage } from "./utils/localStorage";
 import CurrentWeatherData from "./models/CurrentWeatherData";
 import CurrentWeatherDetailsData from "./models/CurrentWeatherDetailsData";
 
-const TEXT = {
+export const CONSTANTS = {
   HEADER_TITLE: "Welcome to Jane's Weather App!",
   DROPDOWN_LABEL: "Select Your City",
+  ENDPOINT: "http://localhost:3001/cities",
+  LOCAL_STORAGE_KEY: "selectedCity",
 };
 
 function App() {
@@ -27,11 +29,9 @@ function App() {
     (async () => {
       try {
         setCitiesIsLoading(true);
-        const { data } = await axios.get("http://localhost:3001/cities");
+        const { data } = await axios.get(CONSTANTS.ENDPOINT);
         setCities(data);
-
-        // below can only run once citie list is set
-        const localStorageCity = getLocalStorage("selectedCity");
+        const localStorageCity = getLocalStorage(CONSTANTS.LOCAL_STORAGE_KEY);
         if (localStorageCity) {
           setSelectedCity(localStorageCity);
         }
@@ -49,7 +49,7 @@ function App() {
         try {
           setCityWeatherIsLoading(true);
           const { data } = await axios.get(
-            `http://localhost:3001/cities/${selectedCity}`
+            `${CONSTANTS.ENDPOINT}/${selectedCity}`
           );
           setCityWeather(data);
         } catch (err) {
@@ -63,20 +63,20 @@ function App() {
 
   const handleDropdownChange = (e) => {
     setSelectedCity(e.target.value);
-    setLocalStorage("selectedCity", e.target.value);
+    setLocalStorage(CONSTANTS.LOCAL_STORAGE_KEY, e.target.value);
   };
 
   return (
     <div className="container">
-      <Header title={TEXT.HEADER_TITLE} />
+      <Header title={CONSTANTS.HEADER_TITLE} />
       <Dropdown
         options={cities}
         dataFormatter={CityDropdownData}
-        label={TEXT.DROPDOWN_LABEL}
+        label={CONSTANTS.DROPDOWN_LABEL}
         handleChange={handleDropdownChange}
         isSelected={!!selectedCity}
         isLoading={citiesIsLoading}
-        defaultValue={getLocalStorage("selectedCity")}
+        defaultValue={getLocalStorage(CONSTANTS.LOCAL_STORAGE_KEY)}
       />
       {cityWeatherIsLoading ? (
         <div>data is loading...</div>

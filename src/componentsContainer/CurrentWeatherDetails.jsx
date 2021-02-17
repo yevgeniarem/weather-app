@@ -16,7 +16,7 @@ function CurrentWeatherDetails({
         Humidity: {humidity}%
       </p>
       <p className="current-weather-details-card__text">
-        Visibility: {visibility}
+        Visibility: {visibility} mi
       </p>
       <p className="current-weather-details-card__text">
         {condition} with a high of {high} °F and a low of {low} °F. Winds at{" "}
